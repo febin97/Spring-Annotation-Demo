@@ -16,6 +16,8 @@ public class App
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         Movie movie1 = context.getBean("movie1",Movie.class);
         System.out.println(movie1);
+        Movie movie2 = context.getBean("movie2",Movie.class);
+        System.out.println(movie2);
         context.registerShutdownHook();
     }
 }
