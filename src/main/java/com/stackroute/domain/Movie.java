@@ -10,7 +10,6 @@ public class Movie {
     public Movie() {
         System.out.println("Movie Default Constructor");
     }
-    @Autowired
     public Movie(Actor actor) {
         this.actor = actor;
     }
@@ -18,6 +17,8 @@ public class Movie {
     public Actor getActor() {
         return actor;
     }
+    @Autowired
+    @Qualifier("actor3")
     public void setActor(Actor actor) {
         this.actor = actor;
     }

@@ -23,6 +23,6 @@ public class AppConfig {
     @Bean(name = {"movie1","movie2"})
     //@Scope("prototype")
     public Movie getMovie(){
-        return new Movie(actor2());
+        return new Movie();
     }
 }
