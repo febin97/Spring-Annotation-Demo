@@ -1,8 +1,8 @@
 package com.stackroute.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
 @Component
 public class Movie {
     private Actor actor;
@@ -10,7 +10,7 @@ public class Movie {
     public Movie() {
         System.out.println("Movie Default Constructor");
     }
-
+    @Autowired
     public Movie(Actor actor) {
         this.actor = actor;
     }
@@ -18,7 +18,6 @@ public class Movie {
     public Actor getActor() {
         return actor;
     }
-    @Autowired
     public void setActor(Actor actor) {
         this.actor = actor;
     }
